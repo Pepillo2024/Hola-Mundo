@@ -1,0 +1,55 @@
+@startuml
+
+
+class Mascota{
+    - salud : int 
+    + Comer()
+    
+}
+class Alimento
+class Salud 
+class Agua 
+class Hueso
+class Juguete
+class Dueño
+class Casa 
+class Cuarto 
+class Animal
+class Dinero
+class Accesorio
+class Vestimenta
+class Croqueta
+class Pelota 
+class Diversion
+
+
+
+Dueño o-- Mascota
+Casa *-- Cuarto
+Dueño *-- Mascota
+Mascota o-- Alimento
+Salud o-- Alimento
+Mascota o-- Juguete
+Dueño o-- Mascota
+Dueño o-- Casa
+Mascota o-- Hueso
+Mascota o-- Agua
+Mascota *-- Salud
+Mascota --|> Animal
+Mascota *-- Dinero
+Mascota o-- Accesorio
+Accesorio --|> Vestimenta
+Mascota *-- Casa
+Mascota o-- Cuarto
+Alimento --|> Croqueta
+Juguete --|> Pelota
+Animal o-- Accesorio
+Croqueta o-- Dinero
+Agua --|> Alimento
+Juguete --|> Hueso
+Diversion o-- Juguete
+
+
+
+
+@enduml
